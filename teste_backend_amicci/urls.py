@@ -22,6 +22,9 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register(r'categories', views.CategoryViewSet)
+router.register(r'briefings', views.BriefingViewSet)
+router.register(r'vendors', views.VendorViewSet)
+router.register(r'retailers', views.RetailerViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
