@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  api:
+    build: .
+    env_file: env.docker
+    volumes:
+      - .:/app
+    ports:
+      - 8001:8000
+  postgres:
+    image: postgres
+    restart: always
+    volumes:
+      - ./container/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5435:5432'
