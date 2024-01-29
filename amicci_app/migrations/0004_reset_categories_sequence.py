@@ -17,7 +17,7 @@ def reset_sequence(*args, **kwargs):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('amicci_app', '0003_category_created_at_category_updated_at'),
+        ('amicci_app', '0002_add_categories'),
     ]
 
     operations = [
